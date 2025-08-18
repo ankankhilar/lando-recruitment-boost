@@ -21,20 +21,6 @@ const ProcessGallery = () => {
       description: "Our AI algorithm analyzes candidates and matches them based on skills, experience, and cultural fit.",
       image: recruitmentProcess,
       color: "from-secondary to-secondary-light"
-    },
-    {
-      step: "03",
-      title: "Connect & Interview",
-      description: "Seamlessly connect with top candidates through our integrated communication and scheduling tools.",
-      image: networking,
-      color: "from-accent to-accent-light"
-    },
-    {
-      step: "04",
-      title: "Successful Placement",
-      description: "Celebrate successful hires and build long-lasting professional relationships that drive growth.",
-      image: successStory,
-      color: "from-primary to-accent"
     }
   ];
 

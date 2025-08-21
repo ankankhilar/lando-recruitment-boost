@@ -1,42 +1,32 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Search, Target, Users, BarChart3, Shield, Clock } from "lucide-react";
-
 const Features = () => {
-  const features = [
-    {
-      icon: Search,
-      title: "Smart Matching",
-      description: "AI-powered algorithm matches candidates with perfect job opportunities based on skills, experience, and preferences."
-    },
-    {
-      icon: Target,
-      title: "Precision Hiring",
-      description: "Advanced filtering and screening tools help employers find exactly the right talent for their specific needs."
-    },
-    {
-      icon: Users,
-      title: "Global Network",
-      description: "Access to a worldwide network of professionals and companies across all industries and experience levels."
-    },
-    {
-      icon: BarChart3,
-      title: "Analytics Dashboard",
-      description: "Comprehensive insights and reporting to track hiring performance and optimize recruitment strategies."
-    },
-    {
-      icon: Shield,
-      title: "Verified Profiles",
-      description: "All profiles are thoroughly verified to ensure authenticity and professional credibility."
-    },
-    {
-      icon: Clock,
-      title: "Fast Results",
-      description: "Streamlined process delivers quality matches quickly, reducing time-to-hire significantly."
-    }
-  ];
-
-  return (
-    <section className="py-section bg-muted">
+  const features = [{
+    icon: Search,
+    title: "Smart Matching",
+    description: "AI-powered algorithm matches candidates with perfect job opportunities based on skills, experience, and preferences."
+  }, {
+    icon: Target,
+    title: "Precision Hiring",
+    description: "Advanced filtering and screening tools help employers find exactly the right talent for their specific needs."
+  }, {
+    icon: Users,
+    title: "Global Network",
+    description: "Access to a worldwide network of professionals and companies across all industries and experience levels."
+  }, {
+    icon: BarChart3,
+    title: "Analytics Dashboard",
+    description: "Comprehensive insights and reporting to track hiring performance and optimize recruitment strategies."
+  }, {
+    icon: Shield,
+    title: "Verified Profiles",
+    description: "All profiles are thoroughly verified to ensure authenticity and professional credibility."
+  }, {
+    icon: Clock,
+    title: "Fast Results",
+    description: "Streamlined process delivers quality matches quickly, reducing time-to-hire significantly."
+  }];
+  return <section className="py-section bg-muted">
       <div className="max-w-7xl mx-auto px-container">
         <div className="text-center mb-16">
           <h2 className="text-h1 font-bold text-foreground mb-4">
@@ -49,10 +39,9 @@ const Features = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300 group">
+          {features.map((feature, index) => <Card key={index} className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300 group">
               <CardContent className="p-6">
-                <div className="mb-4">
+                <div className="mb-4 bg-blue-100">
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
@@ -64,12 +53,9 @@ const Features = () => {
                   </p>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Features;

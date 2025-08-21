@@ -38,15 +38,47 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-hero font-bold text-white mb-6 leading-tight">
-              Connect Talent with
+              Experience the Future of
               <span className="block bg-gradient-to-r from-accent-light to-accent bg-clip-text text-transparent">
-                Opportunity
+                AI-Powered Recruitment
               </span>
             </h1>
             <p className="text-large text-white/90 mb-8 max-w-xl">
-              The leading recruitment platform that brings together exceptional candidates 
-              and forward-thinking companies. Build your future today.
+              Revolutionary AI-driven platform that intelligently matches candidates with opportunities using advanced machine learning, predictive analytics, and automated screening processes.
             </p>
+            
+            {/* AI Features Showcase */}
+            <div className="mb-8 p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                🤖 AI-Powered Features
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div className="flex items-center text-white/90">
+                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  Smart Resume Parsing & Analysis
+                </div>
+                <div className="flex items-center text-white/90">
+                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  AI-Generated Job Descriptions
+                </div>
+                <div className="flex items-center text-white/90">
+                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  Predictive Candidate Matching
+                </div>
+                <div className="flex items-center text-white/90">
+                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  Automated Interview Scheduling
+                </div>
+                <div className="flex items-center text-white/90">
+                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  Bias-Free Screening Process
+                </div>
+                <div className="flex items-center text-white/90">
+                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  Real-time Market Insights
+                </div>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="hero" size="lg" className="group">

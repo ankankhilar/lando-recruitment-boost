@@ -1,12 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Briefcase, LogIn, UserPlus } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import talentConnectLogo from "@/assets/talentconnect-logo.png";
 const Hero = () => {
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Navigation */}
       <nav className="relative z-20 flex justify-between items-center px-container py-6">
-        <div className="text-xl font-bold text-white">
-          TalentConnect
+        <div className="flex items-center">
+          <img 
+            src={talentConnectLogo} 
+            alt="TalentConnect Logo" 
+            className="h-8 w-auto"
+          />
         </div>
         <div className="flex gap-3">
           <Button variant="ghost" size="sm" className="bg-slate-50 text-blue-700">

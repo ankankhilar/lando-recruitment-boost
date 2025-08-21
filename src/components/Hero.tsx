@@ -7,7 +7,11 @@ const Hero = () => {
       {/* Navigation */}
       <nav className="relative z-20 flex justify-between items-center px-container py-6">
         <div className="flex items-center">
-          <img src={talentConnectLogo} alt="TalentConnect Logo" className="h-8 w-auto" />
+          <img 
+            src={talentConnectLogo} 
+            alt="TalentConnect Logo" 
+            className="h-8 w-auto relative z-10 filter drop-shadow-sm" 
+          />
         </div>
         <div className="flex gap-3">
           <Button variant="ghost" size="sm" className="bg-slate-50 text-blue-700">
@@ -44,7 +48,32 @@ const Hero = () => {
             </p>
             
             {/* AI Features Showcase */}
-            
+            <div className="mb-8 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+              <div className="flex items-center text-white/90">
+                <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                Smart Resume Parsing
+              </div>
+              <div className="flex items-center text-white/90">
+                <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                AI-Generated Matches
+              </div>
+              <div className="flex items-center text-white/90">
+                <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                Predictive Analytics
+              </div>
+              <div className="flex items-center text-white/90">
+                <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                Bias-Free Screening
+              </div>
+              <div className="flex items-center text-white/90">
+                <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                Auto Interview Scheduling
+              </div>
+              <div className="flex items-center text-white/90">
+                <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                Real-time Insights
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="hero" size="lg" className="group">

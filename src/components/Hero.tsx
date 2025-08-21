@@ -7,11 +7,7 @@ const Hero = () => {
       {/* Navigation */}
       <nav className="relative z-20 flex justify-between items-center px-container py-6">
         <div className="flex items-center">
-          <img 
-            src={talentConnectLogo} 
-            alt="TalentConnect Logo" 
-            className="h-8 w-auto"
-          />
+          <img src={talentConnectLogo} alt="TalentConnect Logo" className="h-8 w-auto" />
         </div>
         <div className="flex gap-3">
           <Button variant="ghost" size="sm" className="bg-slate-50 text-blue-700">
@@ -48,37 +44,7 @@ const Hero = () => {
             </p>
             
             {/* AI Features Showcase */}
-            <div className="mb-8 p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                🤖 AI-Powered Features
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div className="flex items-center text-white/90">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                  Smart Resume Parsing & Analysis
-                </div>
-                <div className="flex items-center text-white/90">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                  AI-Generated Job Descriptions
-                </div>
-                <div className="flex items-center text-white/90">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                  Predictive Candidate Matching
-                </div>
-                <div className="flex items-center text-white/90">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                  Automated Interview Scheduling
-                </div>
-                <div className="flex items-center text-white/90">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                  Bias-Free Screening Process
-                </div>
-                <div className="flex items-center text-white/90">
-                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                  Real-time Market Insights
-                </div>
-              </div>
-            </div>
+            
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="hero" size="lg" className="group">

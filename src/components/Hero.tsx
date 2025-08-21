@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Briefcase, LogIn, UserPlus } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroBackground from "@/assets/hero-background.jpg";
 import talentConnectLogo from "@/assets/talentconnect-logo.png";
 const Hero = () => {
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="relative flex items-center min-h-[calc(100vh-80px)]">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img src={heroImage} alt="Professional team collaboration" className="w-full h-full object-cover opacity-20" />
+        <img src={heroBackground} alt="Modern office with AI technology" className="w-full h-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-hero opacity-90" />
       </div>
       

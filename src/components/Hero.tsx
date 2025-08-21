@@ -1,10 +1,29 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, Briefcase } from "lucide-react";
+import { ArrowRight, Users, Briefcase, LogIn, UserPlus } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
+      {/* Navigation */}
+      <nav className="relative z-20 flex justify-between items-center px-container py-6">
+        <div className="text-xl font-bold text-white">
+          TalentConnect
+        </div>
+        <div className="flex gap-3">
+          <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+            <LogIn className="mr-2 h-4 w-4" />
+            Sign In
+          </Button>
+          <Button variant="hero" size="sm">
+            <UserPlus className="mr-2 h-4 w-4" />
+            Sign Up
+          </Button>
+        </div>
+      </nav>
+
+      {/* Hero Content */}
+      <div className="relative flex items-center min-h-[calc(100vh-80px)]">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
@@ -82,6 +101,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

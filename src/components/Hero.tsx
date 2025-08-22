@@ -27,9 +27,21 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative flex items-center min-h-[calc(100vh-80px)]">
-      {/* Background Image with Overlay */}
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0">
-        <img src={heroBackground} alt="Modern office with AI technology" className="w-full h-full object-cover opacity-40" />
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="w-full h-full object-cover opacity-40"
+          poster={heroBackground}
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-businesspeople-working-in-a-modern-office-4609-large.mp4" type="video/mp4" />
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-businesspeople-working-in-a-modern-office-4609-large.webm" type="video/webm" />
+          {/* Fallback to image if video doesn't load */}
+          <img src={heroBackground} alt="Modern office with AI technology" className="w-full h-full object-cover opacity-40" />
+        </video>
         <div className="absolute inset-0 bg-gradient-hero opacity-60" />
       </div>
       

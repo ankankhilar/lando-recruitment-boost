@@ -34,8 +34,14 @@ const Hero = () => {
           muted 
           loop 
           playsInline
+          controls={false}
+          preload="auto"
           className="w-full h-full object-cover opacity-40"
           poster={heroBackground}
+          onLoadedData={(e) => {
+            const video = e.target as HTMLVideoElement;
+            video.play().catch(console.error);
+          }}
         >
           <source src="https://assets.mixkit.co/videos/preview/mixkit-businesspeople-working-in-a-modern-office-4609-large.mp4" type="video/mp4" />
           <source src="https://assets.mixkit.co/videos/preview/mixkit-businesspeople-working-in-a-modern-office-4609-large.webm" type="video/webm" />

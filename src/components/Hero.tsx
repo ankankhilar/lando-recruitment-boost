@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Briefcase, LogIn, UserPlus } from "lucide-react";
-import heroBackground from "@/assets/hero-background-new.jpg";
+import heroBackground from "@/assets/hero-background-v2.jpg";
 import talentConnectLogo from "@/assets/talentconnect-logo.png";
 const Hero = () => {
   return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">

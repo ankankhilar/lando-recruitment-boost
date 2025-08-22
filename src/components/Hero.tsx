@@ -29,8 +29,8 @@ const Hero = () => {
       <div className="relative flex items-center min-h-[calc(100vh-80px)]">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img src={heroBackground} alt="Modern office with AI technology" className="w-full h-full object-cover opacity-15" />
-        <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+        <img src={heroBackground} alt="Modern office with AI technology" className="w-full h-full object-cover opacity-40" />
+        <div className="absolute inset-0 bg-gradient-hero opacity-60" />
       </div>
       
       {/* Content */}

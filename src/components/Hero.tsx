@@ -7,11 +7,7 @@ const Hero = () => {
       {/* Navigation */}
       <nav className="relative z-20 flex justify-between items-center px-container py-6">
         <div className="flex items-center">
-          <img 
-            src={talentConnectLogo} 
-            alt="TalentConnect Logo" 
-            className="h-8 w-auto relative z-10 filter drop-shadow-sm" 
-          />
+          <img src={talentConnectLogo} alt="TalentConnect Logo" className="h-8 w-auto relative z-10 filter drop-shadow-sm" />
         </div>
         <div className="flex gap-3">
           <Button variant="ghost" size="sm" className="bg-slate-50 text-blue-700">
@@ -29,20 +25,10 @@ const Hero = () => {
       <div className="relative flex items-center min-h-[calc(100vh-80px)]">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          controls={false}
-          preload="auto"
-          className="w-full h-full object-cover opacity-40"
-          poster={heroBackground}
-          onLoadedData={(e) => {
-            const video = e.target as HTMLVideoElement;
-            video.play().catch(console.error);
-          }}
-        >
+        <video autoPlay muted loop playsInline controls={false} preload="auto" className="w-full h-full object-cover opacity-40" poster={heroBackground} onLoadedData={e => {
+          const video = e.target as HTMLVideoElement;
+          video.play().catch(console.error);
+        }}>
           <source src="https://assets.mixkit.co/videos/preview/mixkit-businesspeople-working-in-a-modern-office-4609-large.mp4" type="video/mp4" />
           <source src="https://assets.mixkit.co/videos/preview/mixkit-businesspeople-working-in-a-modern-office-4609-large.webm" type="video/webm" />
           {/* Fallback to image if video doesn't load */}
@@ -108,16 +94,16 @@ const Hero = () => {
             
             <div className="mt-12 grid grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-h2 font-bold text-white">50K+</div>
-                <div className="text-small text-white/80">Active Jobs</div>
+                
+                
               </div>
               <div>
-                <div className="text-h2 font-bold text-white">100K+</div>
-                <div className="text-small text-white/80">Candidates</div>
+                
+                
               </div>
               <div>
-                <div className="text-h2 font-bold text-white">5K+</div>
-                <div className="text-small text-white/80">Companies</div>
+                
+                
               </div>
             </div>
           </div>

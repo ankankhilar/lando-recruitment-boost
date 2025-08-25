@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import recruitmentProcess from "@/assets/recruitment-process.jpg";
 import successStory from "@/assets/success-story.jpg";
 import networking from "@/assets/networking.jpg";
-import dashboard from "@/assets/dashboard.jpg";
+import dashboard from "@/assets/dashboard-new.jpg";
 import BulkResumeUpload from "./BulkResumeUpload";
 
 const ProcessGallery = () => {

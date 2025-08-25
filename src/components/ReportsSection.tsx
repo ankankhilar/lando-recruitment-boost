@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart3, TrendingUp, Users, Target } from "lucide-react";
 import analyticsDashboard from "@/assets/analytics-dashboard.jpg";
-import recruitmentReports from "@/assets/recruitment-reports.jpg";
+import recruitmentReports from "@/assets/performance-reports-new.jpg";
 import hrInsights from "@/assets/hr-insights.jpg";
 const ReportsSection = () => {
   const reportFeatures = [{

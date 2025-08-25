@@ -59,24 +59,7 @@ const ReportsSection = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">95%</div>
-            <p className="text-muted-foreground">Hiring Success Rate</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">50%</div>
-            <p className="text-muted-foreground">Faster Time-to-Hire</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">10K+</div>
-            <p className="text-muted-foreground">Successful Placements</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-            <p className="text-muted-foreground">Analytics Access</p>
-          </div>
-        </div>
+        
 
         {/* CTA */}
         <div className="text-center">

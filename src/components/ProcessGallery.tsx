@@ -5,6 +5,7 @@ import recruitmentProcess from "@/assets/recruitment-process.jpg";
 import successStory from "@/assets/success-story.jpg";
 import networking from "@/assets/networking.jpg";
 import dashboard from "@/assets/dashboard.jpg";
+import BulkResumeUpload from "./BulkResumeUpload";
 
 const ProcessGallery = () => {
   const steps = [
@@ -13,14 +14,24 @@ const ProcessGallery = () => {
       title: "Post Your Job",
       description: "Create detailed job postings with our intuitive interface. Define requirements, benefits, and company culture.",
       image: dashboard,
-      color: "from-primary to-primary-light"
+      color: "from-primary to-primary-light",
+      component: null
     },
     {
       step: "02", 
       title: "Smart Matching",
       description: "Our AI algorithm analyzes candidates and matches them based on skills, experience, and cultural fit.",
       image: recruitmentProcess,
-      color: "from-secondary to-secondary-light"
+      color: "from-secondary to-secondary-light",
+      component: null
+    },
+    {
+      step: "03",
+      title: "Bulk Resume Upload",
+      description: "Upload multiple resumes at once with our drag-and-drop interface. Process hundreds of applications efficiently.",
+      image: networking,
+      color: "from-accent to-accent-light",
+      component: <BulkResumeUpload />
     }
   ];
 
@@ -67,13 +78,19 @@ const ProcessGallery = () => {
                     <h3 className="text-h2 font-bold text-foreground mb-4">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {step.description}
-                    </p>
-                    <Button variant="outline" className="group">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Button>
+                     <p className="text-muted-foreground mb-6 leading-relaxed">
+                       {step.description}
+                     </p>
+                     {step.component ? (
+                       <div className="mb-6">
+                         {step.component}
+                       </div>
+                     ) : (
+                       <Button variant="outline" className="group">
+                         Learn More
+                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                       </Button>
+                     )}
                   </CardContent>
                 </Card>
               </div>

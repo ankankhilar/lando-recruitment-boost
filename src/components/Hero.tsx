@@ -107,29 +107,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          
-          <div className="hidden lg:block">
-            <div className="relative">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 shadow-glow border border-white/20">
-                <h3 className="text-h3 font-semibold text-white mb-4">Quick Apply</h3>
-                <div className="space-y-4">
-                  <div className="bg-white/5 rounded p-3">
-                    <div className="text-small text-white/70">Latest Position</div>
-                    <div className="text-white font-medium">Senior Frontend Developer</div>
-                    <div className="text-small text-accent-light">TechCorp • $120k-150k</div>
-                  </div>
-                  <div className="bg-white/5 rounded p-3">
-                    <div className="text-small text-white/70">Featured Role</div>
-                    <div className="text-white font-medium">Product Manager</div>
-                    <div className="text-small text-accent-light">InnovateCo • $100k-130k</div>
-                  </div>
-                </div>
-                <Button variant="secondary" className="w-full mt-4">
-                  View All Jobs
-                </Button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       </div>

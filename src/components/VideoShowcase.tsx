@@ -74,6 +74,30 @@ const VideoShowcase = () => {
                 <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
                 <span>Comprehensive analytics dashboard</span>
               </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                <span>Automated resume screening & parsing</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                <span>Bias-free candidate evaluation</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                <span>Multi-channel job posting integration</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                <span>Customizable hiring workflow automation</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                <span>Advanced talent pipeline management</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                <span>Integrated background check services</span>
+              </div>
             </div>
             
             <Button variant="hero" size="lg" className="mb-8">

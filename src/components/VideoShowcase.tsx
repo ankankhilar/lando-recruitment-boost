@@ -57,46 +57,50 @@ const VideoShowcase = () => {
               stories and learn how we're revolutionizing recruitment.
             </p>
             
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>AI-powered candidate matching</span>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>AI-powered candidate matching</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>Streamlined interview scheduling</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>Real-time collaboration tools</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>Comprehensive analytics dashboard</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>Automated resume screening & parsing</span>
+                </div>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>Streamlined interview scheduling</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>Real-time collaboration tools</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>Comprehensive analytics dashboard</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>Automated resume screening & parsing</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>Bias-free candidate evaluation</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>Multi-channel job posting integration</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>Customizable hiring workflow automation</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>Advanced talent pipeline management</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
-                <span>Integrated background check services</span>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>Bias-free candidate evaluation</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>Multi-channel job posting integration</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>Customizable hiring workflow automation</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>Advanced talent pipeline management</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-accent-light mr-3" />
+                  <span>Integrated background check services</span>
+                </div>
               </div>
             </div>
             

@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Briefcase, LogIn, UserPlus } from "lucide-react";
 import heroBackground from "@/assets/hero-background-v2.jpg";
 import talentConnectLogo from "@/assets/talentconnect-logo.png";
+
 const Hero = () => {
-  return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
+  return (
+    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Navigation */}
       <nav className="relative z-20 flex justify-between items-center px-container py-6">
         <div className="flex items-center">
@@ -39,7 +41,7 @@ const Hero = () => {
           className="w-full h-full object-cover opacity-40"
           poster={heroBackground}
           onLoadedData={(e) => {
-            const video = e.target as HTMLVideoElement;
+            const video = e.target;
             video.play().catch(console.error);
           }}
         >
@@ -147,6 +149,8 @@ const Hero = () => {
         </div>
       </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

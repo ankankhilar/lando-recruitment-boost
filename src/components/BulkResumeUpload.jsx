@@ -4,34 +4,27 @@ import { Button } from "@/components/ui/button";
 import { Upload, FileText, X, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-interface UploadedFile {
-  id: string;
-  name: string;
-  size: number;
-  status: 'uploading' | 'completed' | 'error';
-}
-
 const BulkResumeUpload = () => {
-  const [files, setFiles] = useState<UploadedFile[]>([]);
+  const [files, setFiles] = useState([]);
   const [isDragOver, setIsDragOver] = useState(false);
   const { toast } = useToast();
 
-  const handleDragOver = useCallback((e: React.DragEvent) => {
+  const handleDragOver = useCallback((e) => {
     e.preventDefault();
     setIsDragOver(true);
   }, []);
 
-  const handleDragLeave = useCallback((e: React.DragEvent) => {
+  const handleDragLeave = useCallback((e) => {
     e.preventDefault();
     setIsDragOver(false);
   }, []);
 
-  const processFiles = (fileList: FileList) => {
-    const newFiles: UploadedFile[] = Array.from(fileList).map(file => ({
+  const processFiles = (fileList) => {
+    const newFiles = Array.from(fileList).map(file => ({
       id: Math.random().toString(36).substr(2, 9),
       name: file.name,
       size: file.size,
-      status: 'uploading' as const
+      status: 'uploading'
     }));
 
     setFiles(prev => [...prev, ...newFiles]);
@@ -51,7 +44,7 @@ const BulkResumeUpload = () => {
     });
   };
 
-  const handleDrop = useCallback((e: React.DragEvent) => {
+  const handleDrop = useCallback((e) => {
     e.preventDefault();
     setIsDragOver(false);
     
@@ -61,18 +54,18 @@ const BulkResumeUpload = () => {
     }
   }, []);
 
-  const handleFileInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileInput = useCallback((e) => {
     const selectedFiles = e.target.files;
     if (selectedFiles && selectedFiles.length > 0) {
       processFiles(selectedFiles);
     }
   }, []);
 
-  const removeFile = (id: string) => {
+  const removeFile = (id) => {
     setFiles(prev => prev.filter(f => f.id !== id));
   };
 
-  const formatFileSize = (bytes: number) => {
+  const formatFileSize = (bytes) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB'];

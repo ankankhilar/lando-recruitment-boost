@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
@@ -31,29 +30,29 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-section bg-background">
-      <div className="max-w-7xl mx-auto px-container">
+    <section className="section bg-white">
+      <div className="max-w-7xl container">
         <div className="text-center mb-16">
-          <h2 className="text-h1 font-bold text-foreground mb-4">
+          <h2 className="h1 mb-4" style={{fontWeight: "bold"}}>
             Trusted by Professionals Worldwide
           </h2>
-          <p className="text-large text-muted-foreground max-w-2xl mx-auto">
+          <p className="large-text text-muted max-w-2xl" style={{margin: "0 auto"}}>
             See what our community of professionals and companies have to say 
             about their experience with our platform.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md-grid-cols-2 lg-grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card border shadow-soft hover:shadow-medium transition-all duration-300 group">
-              <CardContent className="p-6">
+            <div key={index} className="card shadow-soft transition-all group">
+              <div className="p-6">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                    <Star key={i} className="h-4 w-4 text-accent" style={{fill: "#10b981"}} />
                   ))}
                 </div>
                 
-                <p className="text-foreground mb-6 italic">
+                <p className="mb-6" style={{fontStyle: "italic"}}>
                   "{testimonial.content}"
                 </p>
                 
@@ -62,20 +61,20 @@ const Testimonials = () => {
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover mr-4"
+                      className="w-12 h-12 rounded-lg object-cover mr-4"
                     />
                   )}
                   <div>
-                    <h4 className="font-semibold text-foreground">
+                    <h4 style={{fontWeight: "600"}}>
                       {testimonial.name}
                     </h4>
-                    <p className="text-small text-muted-foreground">
+                    <p className="small-text text-muted">
                       {testimonial.role} at {testimonial.company}
                     </p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Search, Target, Users, BarChart3, Shield, Clock } from "lucide-react";
 
 const Features = () => {
@@ -36,35 +35,35 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-section bg-muted">
-      <div className="max-w-7xl mx-auto px-container">
+    <section className="section bg-muted">
+      <div className="max-w-7xl container">
         <div className="text-center mb-16">
-          <h2 className="text-h1 font-bold text-foreground mb-4">
+          <h2 className="h1 mb-4" style={{fontWeight: "bold"}}>
             Why Choose Our Platform?
           </h2>
-          <p className="text-large text-muted-foreground max-w-2xl mx-auto">
+          <p className="large-text text-muted max-w-2xl" style={{margin: "0 auto"}}>
             We combine cutting-edge technology with human expertise to create 
             the most effective recruitment experience.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md-grid-cols-2 lg-grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300 group">
-              <CardContent className="p-6">
-                <div className="mb-4 bg-neutral-50">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <div key={index} className="card bg-gradient-card shadow-soft transition-all group" style={{border: "none"}}>
+              <div className="card-content">
+                <div className="mb-4">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4 transition-transform group-hover-scale-110">
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-h3 font-semibold text-foreground mb-2">
+                  <h3 className="h3 mb-2" style={{fontWeight: "600"}}>
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     {feature.description}
                   </p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

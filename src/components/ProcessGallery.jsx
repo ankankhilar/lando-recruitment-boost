@@ -1,5 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import recruitmentProcess from "@/assets/recruitment-process.jpg";
 import successStory from "@/assets/success-story.jpg";
@@ -14,7 +12,7 @@ const ProcessGallery = () => {
       title: "Post Your Job",
       description: "Create detailed job postings with our intuitive interface. Define requirements, benefits, and company culture.",
       image: dashboard,
-      color: "from-primary to-primary-light",
+      color: "bg-gradient-primary",
       component: null
     },
     {
@@ -22,7 +20,7 @@ const ProcessGallery = () => {
       title: "Smart Matching",
       description: "Our AI algorithm analyzes candidates and matches them based on skills, experience, and cultural fit.",
       image: recruitmentProcess,
-      color: "from-secondary to-secondary-light",
+      color: "bg-secondary",
       component: null
     },
     {
@@ -30,38 +28,39 @@ const ProcessGallery = () => {
       title: "Bulk Resume Upload",
       description: "Upload multiple resumes at once with our drag-and-drop interface. Process hundreds of applications efficiently.",
       image: networking,
-      color: "from-accent to-accent-light",
+      color: "bg-accent",
       component: <BulkResumeUpload />
     }
   ];
 
   return (
-    <section className="py-section bg-muted">
-      <div className="max-w-7xl mx-auto px-container">
+    <section className="section bg-muted">
+      <div className="max-w-7xl container">
         <div className="text-center mb-16">
-          <h2 className="text-h1 font-bold text-foreground mb-4">
+          <h2 className="h1 mb-4" style={{fontWeight: "bold"}}>
             How It Works
           </h2>
-          <p className="text-large text-muted-foreground max-w-2xl mx-auto">
+          <p className="large-text text-muted max-w-2xl" style={{margin: "0 auto"}}>
             Our streamlined process makes recruitment efficient and effective. 
             Follow these simple steps to find your perfect match.
           </p>
         </div>
         
-        <div className="space-y-12">
+        <div style={{marginBottom: "3rem"}}>
           {steps.map((step, index) => (
-            <div key={index} className={`grid lg:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+            <div key={index} className={`grid lg-grid-cols-2 gap-8 items-center ${index !== steps.length - 1 ? 'mb-12' : ''}`} style={{marginBottom: index !== steps.length - 1 ? "3rem" : "0"}}>
               {/* Image */}
-              <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <div className="relative group overflow-hidden rounded-lg shadow-medium hover:shadow-large transition-shadow duration-300">
+              <div style={{order: index % 2 === 1 ? 2 : 1}}>
+                <div className="relative overflow-hidden rounded-lg shadow-medium transition-all group">
                   <img 
                     src={step.image} 
                     alt={step.title}
-                    className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full object-cover transition-transform group"
+                    style={{height: "400px"}}
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-r ${step.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
-                  <div className="absolute top-4 left-4">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white font-bold text-lg shadow-medium`}>
+                  <div className={`absolute inset-0 ${step.color} transition-all`} style={{opacity: "0.2"}}></div>
+                  <div className="absolute" style={{top: "1rem", left: "1rem"}}>
+                    <div className={`w-12 h-12 ${step.color} rounded-lg flex items-center justify-center text-white shadow-medium`} style={{fontWeight: "bold", fontSize: "1.125rem"}}>
                       {step.step}
                     </div>
                   </div>
@@ -69,16 +68,16 @@ const ProcessGallery = () => {
               </div>
               
               {/* Content */}
-              <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                <Card className="bg-card border-0 shadow-soft h-full">
-                  <CardContent className="p-8">
-                    <div className={`inline-block px-3 py-1 bg-gradient-to-r ${step.color} text-white text-small font-medium rounded-full mb-4`}>
+              <div style={{order: index % 2 === 1 ? 1 : 2}}>
+                <div className="card bg-white shadow-soft h-full">
+                  <div className="p-8">
+                    <div className={`inline-block px-3 py-1 ${step.color} text-white small-text rounded-lg mb-4`} style={{fontWeight: "500"}}>
                       Step {step.step}
                     </div>
-                    <h3 className="text-h2 font-bold text-foreground mb-4">
+                    <h3 className="h2 mb-4" style={{fontWeight: "bold"}}>
                       {step.title}
                     </h3>
-                     <p className="text-muted-foreground mb-6 leading-relaxed">
+                     <p className="text-muted mb-6" style={{lineHeight: "1.6"}}>
                        {step.description}
                      </p>
                      {step.component ? (
@@ -86,13 +85,13 @@ const ProcessGallery = () => {
                          {step.component}
                        </div>
                      ) : (
-                       <Button variant="outline" className="group">
+                       <button className="btn btn-outline group">
                          Learn More
-                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                       </Button>
+                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover-translate-x-1" />
+                       </button>
                      )}
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -100,25 +99,25 @@ const ProcessGallery = () => {
         
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <Card className="bg-gradient-primary text-white border-0 shadow-large">
-            <CardContent className="p-12">
-              <h3 className="text-h2 font-bold mb-4">
+          <div className="card bg-gradient-primary text-white shadow-large">
+            <div className="p-12">
+              <h3 className="h2 mb-4" style={{fontWeight: "bold"}}>
                 Ready to Transform Your Hiring Process?
               </h3>
-              <p className="text-large text-white/90 mb-8 max-w-2xl mx-auto">
+              <p className="large-text text-white-90 mb-8 max-w-2xl" style={{margin: "0 auto 2rem auto"}}>
                 Join thousands of companies that have revolutionized their recruitment 
                 with our platform. Start your journey today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="lg">
+              <div className="flex flex-col sm-flex-row gap-4 justify-center">
+                <button className="btn btn-hero btn-lg">
                   Get Started Free
-                </Button>
-                <Button variant="outline-hero" size="lg">
+                </button>
+                <button className="btn btn-outline-hero btn-lg">
                   Schedule Demo
-                </Button>
+                </button>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>
